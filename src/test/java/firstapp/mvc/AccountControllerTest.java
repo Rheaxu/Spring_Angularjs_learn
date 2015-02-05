@@ -138,7 +138,8 @@ public class AccountControllerTest {
 
         mockMvc.perform(get("/rest/accounts/1"))
                 .andDo(print())
-                .andExpect(jsonPath("$.password", is(nullValue())))
+                .andExpect(jsonPath("$.password").doesNotExist())
+                //.andExpect(jsonPath("$.password", is(nullValue())))   // for com.jayway.jsonpath whose version is older than 0.9
                 .andExpect(jsonPath("$.name", is(foundAccount.getName())))
                 .andExpect(status().isOk());
     }
