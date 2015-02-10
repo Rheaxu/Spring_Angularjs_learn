@@ -3,6 +3,7 @@ package firstapp.core.repositories.jpa;
 import firstapp.core.models.entities.Blog;
 import firstapp.core.models.entities.BlogEntry;
 import firstapp.core.repositories.BlogEntryRepo;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -12,6 +13,7 @@ import java.util.List;
 /**
  * Created by Rhea on 2/9/15.
  */
+@Repository
 public class JpaBlogEntryRepo implements BlogEntryRepo {
     @PersistenceContext
     private EntityManager em;

@@ -2,6 +2,7 @@ package firstapp.core.repositories.jpa;
 
 import firstapp.core.models.entities.Blog;
 import firstapp.core.repositories.BlogRepo;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -11,6 +12,7 @@ import java.util.List;
 /**
  * Created by Rhea on 2/9/15.
  */
+@Repository
 public class JpaBlogRepo implements BlogRepo {
     @PersistenceContext
     private EntityManager em;
@@ -31,6 +33,7 @@ public class JpaBlogRepo implements BlogRepo {
     public Blog findBlog(Long id){
         return em.find(Blog.class, id);
     }
+
     @Override
     public Blog findBlogByTitle(String title){
         Query query = em.createQuery("SELECT b from Blog b where b.title=?1");

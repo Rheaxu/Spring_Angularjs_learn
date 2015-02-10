@@ -1,12 +1,17 @@
 package firstapp.core.models.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 /**
  * Created by Rhea on 1/23/15.
  */
+@Entity
 public class BlogEntry {
-
+    @Id
+    @GeneratedValue
     private Long id;
 
     private String title;

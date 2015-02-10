@@ -57,11 +57,11 @@ public class AccountServiceImpl implements AccountService {
             throw new AccountDoesNotExistException();
         }
 
-        Blog createBlog = blogRepo.createBlog(data);
+        Blog createdBlog = blogRepo.createBlog(data);
 
-        createBlog.setOwner(account);
+        createdBlog.setOwner(account);
 
-        return createBlog;
+        return createdBlog;
     }
 
     @Override

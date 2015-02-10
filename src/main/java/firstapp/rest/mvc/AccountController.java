@@ -15,7 +15,9 @@ import firstapp.rest.resources.AccountResource;
 import firstapp.rest.resources.AccountListResource;
 import firstapp.rest.resources.BlogListResource;
 import firstapp.rest.resources.BlogResource;
+import firstapp.rest.resources.asm.AccountListResourceAsm;
 import firstapp.rest.resources.asm.AccountResourceAsm;
+import firstapp.rest.resources.asm.BlogListResourceAsm;
 import firstapp.rest.resources.asm.BlogResourceAsm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -36,13 +38,13 @@ import java.util.Arrays;
 public class AccountController {
     private AccountService accountService;
 
-    @Autowired      //Autowired to controller
+    @Autowired      //Inject real service to controller
     public AccountController(AccountService accountService) {
         this.accountService = accountService;
     }
 
     @RequestMapping(method=RequestMethod.GET)
-    public ResponseEntity<AccountListResource> findAllAccounts(@RequestParam(valut="name",required=false) String name){
+    public ResponseEntity<AccountListResource> findAllAccounts(@RequestParam(value="name",required=false) String name){
         AccountList list = null;
         if(name == null){
             list = accountService.findAllAccounts();
