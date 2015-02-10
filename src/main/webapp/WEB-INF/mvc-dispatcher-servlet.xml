@@ -11,6 +11,8 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
     <context:component-scan base-package="firstapp.rest.mvc" />
 
+    <mvc:resources mapping="/app/**" location="/app/build/"/> <!--Where js app will be built and run-->
+
     <mvc:annotation-driven/>
 
     <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
