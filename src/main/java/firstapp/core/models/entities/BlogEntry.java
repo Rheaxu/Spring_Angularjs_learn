@@ -1,5 +1,7 @@
 package firstapp.core.models.entities;
 
+import javax.persistence.ManyToOne;
+
 /**
  * Created by Rhea on 1/23/15.
  */
@@ -9,6 +11,9 @@ public class BlogEntry {
 
     private String title;
 
+    private String content;
+
+    @ManyToOne
     private Blog blog;
 
     public String getTitle() {
@@ -34,4 +39,13 @@ public class BlogEntry {
     public void setBlog(Blog blog) {
         this.blog = blog;
     }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
 }

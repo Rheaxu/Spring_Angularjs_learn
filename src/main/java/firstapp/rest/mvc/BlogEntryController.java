@@ -5,6 +5,7 @@ import firstapp.core.models.entities.BlogEntry;
 import firstapp.core.services.BlogEntryService;
 import firstapp.rest.resources.BlogEntryResource;
 import firstapp.rest.resources.asm.BlogEntryResourceAsm;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -22,6 +23,7 @@ public class BlogEntryController {
 
     private BlogEntryService service;
 
+    @Autowired
     public BlogEntryController(BlogEntryService service)
     {
         this.service = service;

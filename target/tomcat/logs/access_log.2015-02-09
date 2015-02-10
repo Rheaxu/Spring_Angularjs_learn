@@ -1,0 +1,1 @@
+0:0:0:0:0:0:0:1 - - [09/Feb/2015:22:53:11 -0500] "GET /basic-web-app/rest/accounts HTTP/1.1" 404 - http-bio-8080-exec-1 0

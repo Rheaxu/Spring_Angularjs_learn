@@ -1,0 +1,8 @@
+firstapp/core/repositories/BlogEntryRepo.class
+firstapp/core/services/impl/BlogServiceImpl.class
+firstapp/core/repositories/jpa/JpaBlogRepo.class
+firstapp/core/services/util/AccountList.class
+firstapp/core/services/impl/AccountServiceImpl.class
+firstapp/core/repositories/jpa/JpaBlogEntryRepo.class
+firstapp/core/repositories/BlogRepo.class
+firstapp/core/services/impl/BlogEntryServiceImpl.class
